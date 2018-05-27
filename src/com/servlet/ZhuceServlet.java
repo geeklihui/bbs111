@@ -36,7 +36,6 @@ public class ZhuceServlet extends HttpServlet {
 		
 		if(ud.register(user)){
 			request.setAttribute("username", name);
-			//request.setAttribute("xiaoxi", "注册成功");
 			request.getRequestDispatcher("/denglu.jsp").forward(request, response);
 		}else{
 			

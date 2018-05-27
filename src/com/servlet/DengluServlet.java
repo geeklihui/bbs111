@@ -1,3 +1,4 @@
+//登录
 package com.servlet;
 
 import java.io.IOException;
@@ -11,24 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 import com.dao.UserDao;
 import com.dao.UserDaoImpl;
 
-public class DengluServlet extends HttpServlet {
+public class DengluServlet extends HttpServlet { //需要继承HttpServlet
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doPost(request, response);
+		doPost(request, response);//将信息使用doPost方法执行
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String name = request.getParameter("name");
+		String name = request.getParameter("name");//得到jsp页面传过来的参数
 		String pwd = request.getParameter("pwd");
 		
 		UserDao ud = new UserDaoImpl();
 		
 		if(ud.login(name, pwd)){
-			request.setAttribute("xiaoxi", "娆㈣繋鐢ㄦ埛"+name);
-			request.getRequestDispatcher("/success.jsp").forward(request, response);
+			request.setAttribute("xiaoxi", name+"已签到成功");//向request域中放置信息
+			request.getRequestDispatcher("/success.jsp").forward(request, response);//转发至成功页
 		}else{
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("index.jsp");//重定向到首页
 		}
 	}
 

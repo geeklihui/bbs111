@@ -1,3 +1,4 @@
+//É¾³ı
 package com.servlet;
 
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class DeleteServlet extends HttpServlet {
 		UserDao ud = new UserDaoImpl();
 		
 		if(ud.delete(userId)){
-			request.setAttribute("xiaoxi", "åˆ é™¤æˆåŠŸ");
+			request.setAttribute("xiaoxi", "É¾³ı³É¹¦");
 			request.getRequestDispatcher("/Searchall").forward(request, response);
 		}else{
 			response.sendRedirect("index.jsp");

@@ -1,3 +1,4 @@
+//Á¬½ÓÊı¾İ¿â
 package com.util;
 
 import java.sql.*;
@@ -14,7 +15,7 @@ public class DBconn {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url,username,password);
 		} catch (Exception e) {
-			System.out.println("init [SQLé©±åŠ¨ç¨‹åºåˆå§‹åŒ–å¤±è´¥ï¼]");
+			System.out.println("init [SQLÇı¶¯³ÌĞò³õÊ¼»¯Ê§°Ü£¡]");
 			e.printStackTrace();
 		}
 	}
@@ -24,7 +25,7 @@ public class DBconn {
 			PreparedStatement ps =  conn.prepareStatement(sql);
 			i =  ps.executeUpdate();
 		} catch (SQLException e) {
-			System.out.println("sqlæ•°æ®åº“å¢åˆ æ”¹å¼‚å¸¸");
+			System.out.println("sqlÊı¾İ¿âÔöÉ¾¸ÄÒì³£");
 			e.printStackTrace();
 		}
 		
@@ -35,7 +36,7 @@ public class DBconn {
 			ps =  conn.prepareStatement(sql);
 			rs =  ps.executeQuery(sql);
 		} catch (SQLException e) {
-			System.out.println("sqlæ•°æ®åº“æŸ¥è¯¢å¼‚å¸¸");
+			System.out.println("sqlÊı¾İ¿â²éÑ¯Òì³£");
 			e.printStackTrace();
 		}
 		return rs;
@@ -44,7 +45,7 @@ public class DBconn {
 		try {
 			conn.close();
 		} catch (SQLException e) {
-			System.out.println("sqlæ•°æ®åº“å…³é—­å¼‚å¸¸");
+			System.out.println("sqlÊı¾İ¿â¹Ø±ÕÒì³£");
 			e.printStackTrace();
 		}
 	}

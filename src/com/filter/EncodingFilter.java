@@ -1,3 +1,4 @@
+//½â¾öÖĞÎÄ×Ö·û¼¯ÂÒÂë
 package com.filter;
 
 import java.io.IOException;
@@ -11,19 +12,19 @@ import javax.servlet.ServletResponse;
 
 public class EncodingFilter implements Filter{
 	public EncodingFilter(){
-		System.out.println("è¿‡æ»¤å™¨æ„é€ ");
+		System.out.println("¹ıÂËÆ÷¹¹Ôì");
 	}
 	public void destroy() {
-		System.out.println("è¿‡æ»¤å™¨é”€æ¯");
+		System.out.println("¹ıÂËÆ÷Ïú»Ù");
 	}
 	public void doFilter(ServletRequest request, ServletResponse response,FilterChain chain) throws IOException, ServletException {
-		request.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");//½«±àÂë¸ÄÎªutf-8
 		response.setContentType("text/html;charset=utf-8");
 		chain.doFilter(request, response);
 	}
 
 	public void init(FilterConfig arg0) throws ServletException {
-		System.out.println("è¿‡æ»¤å™¨åˆå§‹åŒ–");
+		System.out.println("¹ıÂËÆ÷³õÊ¼»¯");
 	}
 
 }

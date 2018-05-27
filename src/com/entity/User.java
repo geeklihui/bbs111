@@ -1,3 +1,5 @@
+//一个User对象对应数据库中的user表一条记录
+
 package com.entity;
 
 public class User {

@@ -1,3 +1,4 @@
+//更新信息
 package com.servlet;
 
 import java.io.IOException;
@@ -35,7 +36,7 @@ public class UpdateServlet extends HttpServlet {
 		UserDao ud = new UserDaoImpl();
 		
 		if(ud.update(userId, name, pwd, sex, home, info)){
-			request.setAttribute("xiaoxi", "鏇存柊鎴愬姛");
+			request.setAttribute("xiaoxi", "更新成功");
 			request.getRequestDispatcher("/Searchall").forward(request, response);
 		}else{
 			response.sendRedirect("index.jsp");

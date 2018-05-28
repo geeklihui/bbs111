@@ -4,9 +4,15 @@ package com.util;
 import java.sql.*;
 
 public class DBconn {
-	static String url = "jdbc:mysql://localhost:3306/test?useunicuee=true& characterEncoding=utf8"; 
+	/*
+	static String url = "jdbc:mysql://localhost:3306/test"; 
 	static String username = "root"; 
-	static String password = "root"; 
+	static String password = ""; 
+	*/
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+    static final String url = "jdbc:mysql://localhost:3306/test";
+    static final String username = "root";
+    static final String password = "";
 	static Connection  conn = null;
 	static ResultSet rs = null;
 	static PreparedStatement ps =null;

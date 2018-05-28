@@ -26,7 +26,7 @@ public class DengluServlet extends HttpServlet { //需要继承HttpServlet
 		UserDao ud = new UserDaoImpl();
 		
 		if(ud.login(name, pwd)){
-			request.setAttribute("xiaoxi", name+"已签到成功");//向request域中放置信息
+			request.setAttribute("xiaoxi", name+"已登录成功");//向request域中放置信息
 			request.getRequestDispatcher("/success.jsp").forward(request, response);//转发至成功页
 		}else{
 			response.sendRedirect("index.jsp");//重定向到首页

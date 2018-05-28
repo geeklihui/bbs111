@@ -9,10 +9,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>已签到列表</title>
+<title>当前用户列表</title>
 </head>
 <body>
- <h1>${xiaoxi}</h1>  
+ <h1>${xiaoxi}</h1> <center>
+ <h3>以下是当前用户列表，您可以在文本框内直接修改信息</h3> 
   <table  width="600" border="1" cellpadding="0" >  
         <tr>  
             <th>ID</th>  
@@ -20,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <th>性别</th>  
             <th>密码</th>  
             <th>家乡</th>  
-            <th>备注</th>  
+            <th>签名</th>  
             <th>操作</th>  
         </tr>  
      <c:forEach var="U" items="${userAll}"  >   
@@ -36,6 +37,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        </tr>  
     </form>   
     </c:forEach>    
-    </table>  
+    </table>  </center>
 </body>
 </html>

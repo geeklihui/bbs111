@@ -10,8 +10,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登陆成功</title>
 </head>
-<body>
+<body><center>
             ${xiaoxi} <br>    
-            <a href="Searchall">查看所有用户</a> 
+            <a href="Searchall">查看所有用户</a> </center>
 </body>
 </html>

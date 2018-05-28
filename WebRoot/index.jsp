@@ -10,7 +10,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登陆失败</title>
 </head>
-<body>
-///
+<body><center>
+密码错误或用户不存在！
+<a href="denglu.jsp">点击返回</a></center>
 </body>
 </html>

@@ -3,16 +3,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>欢迎来到签到系统</title>
+<title>欢迎来到小论坛</title>
 </head>
-<body>
+<body><center>
+ <h3>欢迎来到小论坛，请登录或注册新用户以继续</h3> 
          <form action="DengluServlet"  method="post"  style="padding-top:-700px;">  
         用户名：<input type="text" name="name"value=""><br><br>  
         密码：  <input type="password" name="pwd"value=""><br><br>  
                     <input type="submit"value="登录"name="denglu"><input type="reset"value="重置"><br>  
-     </form>  
+     </form>  <br>
      <form action="zhuce.jsp">  
         <input type="submit"value="新用户注册">  
-         </form>  
+         </form></center>  
 </body>
 </html>

@@ -27,15 +27,13 @@ public class UpdateServlet extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String pwd = request.getParameter("pwd");
-		String sex = request.getParameter("sex");
-		String home = request.getParameter("home");
 		String info = request.getParameter("info");
 		
 		System.out.println("------------------------------------"+userId);
 		
 		UserDao ud = new UserDaoImpl();
 		
-		if(ud.update(userId, name, pwd, sex, home, info)){
+		if(ud.update(userId, name, pwd, info)){
 			request.setAttribute("xiaoxi", "更新成功");
 			request.getRequestDispatcher("/Searchall").forward(request, response);
 		}else{

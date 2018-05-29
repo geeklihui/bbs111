@@ -13,8 +13,8 @@ public class UserDaoImpl implements UserDao{
 	public boolean register(User user) {
 		boolean flag = false;
 		DBconn.init();
-		int i =DBconn.addUpdDel("insert into user(name,pwd,sex,home,info) " +
-				"values('"+user.getName()+"','"+user.getPwd()+"','"+user.getSex()+"','"+user.getHome()+"','"+user.getInfo()+"')");
+		int i =DBconn.addUpdDel("insert into user(name,pwd,info) " +
+				"values('"+user.getName()+"','"+user.getPwd()+"','"+user.getInfo()+"')");
 		if(i>0){
 			flag = true;
 		}
@@ -47,8 +47,6 @@ public class UserDaoImpl implements UserDao{
 				user.setId(rs.getInt("id"));
 				user.setName(rs.getString("name"));
 				user.setPwd(rs.getString("pwd"));
-				user.setSex(rs.getString("sex"));
-				user.setHome(rs.getString("home"));
 				user.setInfo(rs.getString("info"));
 				list.add(user);
 			}
@@ -59,13 +57,11 @@ public class UserDaoImpl implements UserDao{
 		}
 		return null;
 	}
-	public boolean update(int id,String name, String pwd,String sex, String home,String info) {
+	public boolean update(int id,String name, String pwd,String info) {
 		boolean flag = false;
 		DBconn.init();
 		String sql ="update user set name ='"+name
 				+"' , pwd ='"+pwd
-				+"' , sex ='"+sex
-				+"' , home ='"+home
 				+"' , info ='"+info+"' where id = "+id;
 		int i =DBconn.addUpdDel(sql);
 		if(i>0){

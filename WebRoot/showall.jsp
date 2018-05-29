@@ -19,10 +19,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <table  width="600" border="1" cellpadding="0" >  
         <tr>  
             <th>ID</th>  
-            <th>姓名</th>  
-            <th>性别</th>  
+            <th>姓名</th>   
             <th>密码</th>  
-            <th>家乡</th>  
             <th>签名</th>  
             <th>操作</th>  
         </tr>  
@@ -31,14 +29,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        <tr>  
            <td><input type="text" value="${U.id}" name="id" ></td>  
            <td><input type="text" value="${U.name}" name="name"></td>  
-           <td><input type="text" value="${U.sex}" name="sex"></td>  
            <td><input type="text" value="${U.pwd}" name="pwd"></td>  
-           <td><input type="text" value="${U.home}" name="home"></td>  
            <td><input type="text" value="${U.info}" name="info"></td>  
            <td><a href="DeleteServlet?id=${U.id}">删除</a>  <input type="submit" value="更新"/></td>  
        </tr>  
     </form>   
     </c:forEach>    
-    </table>  </center>
+    </table>  
+            <div class="btn-group">
+        <a href="denglu.jsp" class="btn btn-primary">返回主页</a>
+      </div> </center>
 </body>
 </html>

@@ -22,15 +22,11 @@ public class ZhuceServlet extends HttpServlet {
 		
 		String name = request.getParameter("name"); //获取jsp页面传过来的参数 
 		String pwd = request.getParameter("pwd");
-		String sex = request.getParameter("sex");
-		String home = request.getParameter("home");
 		String info = request.getParameter("info");
 		
 		User user = new User();
 		user.setName(name);
 		user.setPwd(pwd);
-		user.setSex(sex);
-		user.setHome(home);
 		user.setInfo(info);
 		
 		UserDao ud = new UserDaoImpl();

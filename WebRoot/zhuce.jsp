@@ -11,10 +11,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>注册新用户</title>
+<style>
+body 
+{
+    background-image:url(img/zhuce.jpg);
+    background-size: cover;
+}
+h2{
+	text-align:center;
+	color:white;
+	text-shadow:2px 2px 8px #000;}
+h4{
+	text-align:center;
+	color:white;
+	text-shadow:0 0 3px #000;
+	margin-bottom:15px;}
+input{
+	box-shadow:0 0 4px #000;}
+
+
+</style>
 </head>
 <body>
 <center>
-  <nav class="navbar navbar-default" role="navigation" >
+  <nav class="navbar navbar-inverse" role="navigation" >
     <div class="container-fluid">
     <div class="navbar-header">
         <a class="navbar-brand" href="denglu.jsp">小憩息</a>
@@ -29,16 +49,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
 </nav>
 <div class="container" style="margin-top:100px;">
-<h3>欢迎新用户！</h3>
-<h4>注册成功后会自动跳转至主页。</h4> 
-  <form action="ZhuceServlet"method="post" style="padding-top:-700px;"> 
-          <div class="input-group" style="padding: 0px 190px;">
+<h2>欢迎新用户！</h2>
+<h4>注册成功后会自动跳转至主页</h4> 
+  <form action="ZhuceServlet" method="post" style="padding-top:-700px;" > 
+          <div class="input-group" style="padding: 0px 300px;">
           <span class="input-group-addon">账户</span><input type="text" name="name"value="" placeholder="请输入用户名" class="form-control"  autofocus > 
         </div><br>
-        <div class="input-group" style="padding: 0px 190px;">
+        <div class="input-group" style="padding: 0px 300px;">
           <span class="input-group-addon">密码</span><input type="password" name="pwd"value="" placeholder="请输入密码" class="form-control">
         </div>  <br>
-        <div class="input-group" style="padding: 0px 190px;">
+        <div class="input-group" style="padding: 0px 300px;">
           <span class="input-group-addon">个性签名</span>
           <input type="password" name="info" value="" placeholder="随便说点啥......" class="form-control">
         </div>  

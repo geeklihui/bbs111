@@ -11,9 +11,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登陆失败</title>
+<style>
+body 
+{
+    background-image:url(img/index.jpg);
+    background-size: cover;
+}
+h3{
+	display:inline-block;
+	color:white;
+	text-shadow:2px 2px 8px #000;
+	margin-top:150px;
+}
+</style>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation" >
+<nav class="navbar navbar-inverse" role="navigation" >
     <div class="container-fluid">
     <div class="navbar-header">
         <a class="navbar-brand" href="denglu.jsp">小憩息</a>
@@ -27,8 +40,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     </div>
 </nav>
-<center>
-<h3>密码错误或用户不存在！<a href="denglu.jsp">点击返回</a></h3>
-</center>
+
+<center><h3 >
+密码错误或用户不存在！<a href="denglu.jsp" style="color:white">点击返回</a>
+</h3></center>
 </body>
 </html>

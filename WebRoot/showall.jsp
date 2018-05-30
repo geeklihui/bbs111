@@ -11,19 +11,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>当前用户列表</title>
+<title>管理员模式</title>
 </head>
-<body style="margin-top:50px;">
+<body>
  <nav class="navbar navbar-default" role="navigation" >
     <div class="container-fluid">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="denglu.jsp">小憩息</a>
+	<div>
+        <ul class="nav navbar-nav">
+        	<li><a  href="denglu.jsp">退出登录</a></li>
+        </ul>
     </div>
     <div>
         <ul class="nav navbar-nav">
-            <li><a href="denglu.jsp">登录</a></li>
-            <li><a href="zhuce.jsp">注册</a></li>
             <li><a href="guanyu.jsp">关于</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <p class="navbar-text">登陆用户：管理员</p>
         </ul>
     </div>
     </div>

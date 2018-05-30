@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     <div>
         <ul class="nav navbar-nav">
-            <li><a href="guanyu.jsp">关于</a></li>
+            <li><a target="_blank" href="guanyu.jsp">关于</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <p class="navbar-text">登陆用户：管理员</p>
@@ -49,13 +49,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <td><input type="text" value="${U.name}" name="name"></td>  
            <td><input type="text" value="${U.pwd}" name="pwd"></td>  
            <td><input type="text" value="${U.info}" name="info"></td>  
-           <td><a href="DeleteServlet?id=${U.id}">删除</a>  <input type="submit" value="更新"/></td>  
+           <td><a href="DeleteServlet?id=${U.id}">删除</a> <input type="submit" value="更新"></td>  
        </tr>  
     </form>   
     </c:forEach>    
-    </table>  <br>
-            <div class="btn-group">
-        <a href="denglu.jsp" class="btn btn-primary">返回主页</a>
-      </div> </center>
+    </table> <br>
+ </center>
 </body>
 </html>

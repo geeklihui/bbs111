@@ -7,11 +7,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎来到小论坛</title>
 </head>
-<body style="margin-top:150px;">
+<body>
 <center>
-<div class="container">
-<div><h3>欢迎来到小论坛，请登录或注册新用户以继续</h3> </div>
-<div style="margin-top:50px;">
+<nav class="navbar navbar-default text-center" role="navigation" >
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="denglu.jsp">小憩息</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="denglu.jsp">登录</a></li>
+            <li><a href="zhuce.jsp">注册</a></li>
+            <li><a href="guanyu.jsp">关于</a></li>
+
+        </ul>
+    </div>
+    </div>
+</nav>
+<div class="container" style="margin-top:100px;">
+<div><h3>小憩息，</h3>
+    <h3>忙碌生活中的一片憩息地。</h3>
+    <br>
+    <h4>请登录或注册新用户以继续</h4>
+ </div><br>
     <form action="DengluServlet"  method="post">  
         <div class="input-group" style="padding: 0px 190px;">
         	<span class="input-group-addon">账户</span><input type="text" name="name"value="" placeholder="请输入用户名" class="form-control"  autofocus > 
@@ -20,17 +38,10 @@
         	<span class="input-group-addon">密码</span><input type="password" name="pwd"value="" placeholder="请输入密码" class="form-control">
         </div>
         <br>
-        <div class="row">
     <div class="btn-group">
         <input type="submit"value="登录"name="denglu" class="btn btn-info">
-        <input type="reset"value="重置" class="btn btn-danger">
-    </div></div>
-    </form><br>
-    <div style="padding: 0px 520px;">
-    	<form action="zhuce.jsp"> <input type="submit"value="注册" class="btn btn-primary btn-block"></form></div>
-    
-</div>
-</div>
+        <input type="reset"value="重置" class="btn btn-danger"></div></form>
+    </div>
 </center>
 </body>
 </html>

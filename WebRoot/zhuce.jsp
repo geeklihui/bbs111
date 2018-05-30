@@ -12,11 +12,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>注册新用户</title>
 </head>
-<body style="margin-top:100px;">
-  <center>
-  <div class="container">
+<body>
+<center>
+  <nav class="navbar navbar-default" role="navigation" >
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="denglu.jsp">小憩息</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="denglu.jsp">登录</a></li>
+            <li class="active"><a href="zhuce.jsp">注册</a></li>
+            <li><a href="guanyu.jsp">关于</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<div class="container" style="margin-top:100px;">
 <h3>欢迎新用户！</h3>
-<h4>注册成功后会自动跳转至主页，如放弃注册，请点击页面下方返回主页</h4> 
+<h4>注册成功后会自动跳转至主页。</h4> 
   <form action="ZhuceServlet"method="post" style="padding-top:-700px;"> 
           <div class="input-group" style="padding: 0px 190px;">
           <span class="input-group-addon">账户</span><input type="text" name="name"value="" placeholder="请输入用户名" class="form-control"  autofocus > 
@@ -28,10 +42,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <span class="input-group-addon">个性签名</span>
           <input type="password" name="info" value="" placeholder="随便说点啥......" class="form-control">
         </div>  
+        <br>
         <div class="btn-group">
         <input type="submit"value="注册" class="btn btn-info">
         <input type="reset"value="重置" class="btn btn-danger">
-        <a href="denglu.jsp" class="btn btn-primary">返回主页</a>
       </div> 
    </form>  
 </div>

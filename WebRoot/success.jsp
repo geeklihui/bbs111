@@ -12,7 +12,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登陆成功</title>
 </head>
-<body style="margin-top:250px;"><center>
+<body>
+<nav class="navbar navbar-default" role="navigation" >
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="denglu.jsp">小憩息</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="denglu.jsp">登录</a></li>
+            <li><a href="zhuce.jsp">注册</a></li>
+            <li><a href="guanyu.jsp">关于</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<center>
 
             <h3>${xiaoxi} <br> <br>
             <a href="Searchall">查看所有用户</a></h3> </center>

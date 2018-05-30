@@ -13,13 +13,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>当前用户列表</title>
 </head>
-<body>
+<body style="margin-top:50px;">
+ <nav class="navbar navbar-default" role="navigation" >
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="denglu.jsp">小憩息</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="denglu.jsp">登录</a></li>
+            <li><a href="zhuce.jsp">注册</a></li>
+            <li><a href="guanyu.jsp">关于</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
  <h1>${xiaoxi}</h1> <center>
- <h3>以下是当前用户列表，您可以在文本框内直接修改信息</h3> 
+ <h3>管理员您好！</h3>
+ <h4>以下是当前用户列表，您可以在文本框内直接修改信息。</h4> 
   <table  width="600" border="1" cellpadding="0" >  
         <tr>  
             <th>ID</th>  
-            <th>姓名</th>   
+            <th>用户</th>   
             <th>密码</th>  
             <th>签名</th>  
             <th>操作</th>  
@@ -35,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        </tr>  
     </form>   
     </c:forEach>    
-    </table>  
+    </table>  <br>
             <div class="btn-group">
         <a href="denglu.jsp" class="btn btn-primary">返回主页</a>
       </div> </center>

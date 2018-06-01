@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%  
-String path = request.getContextPath();  
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
-%>      
+    pageEncoding="UTF-8"%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- 引入 Bootstrap -->
@@ -28,10 +24,9 @@ h4{
 	margin-bottom:15px;}
 input{
 	box-shadow:0 0 4px #000;}
-
-
 </style>
 </head>
+
 <body>
 <center>
   <nav class="navbar navbar-inverse" role="navigation" >

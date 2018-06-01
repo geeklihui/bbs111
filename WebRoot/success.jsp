@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%  
-String path = request.getContextPath();  
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
-%>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- 引入 Bootstrap -->
@@ -18,6 +14,10 @@ body
     background-size: cover;
 }
 h3{
+	text-align:center;
+	color:white;
+	text-shadow:2px 2px 8px #000;}
+p{
 	text-align:center;
 	color:white;
 	text-shadow:2px 2px 8px #000;}
@@ -43,7 +43,8 @@ h3{
 </nav>
 <center>
             <h3>你好，${xiaoxi} <p></p>
-                在这里，你可以享受轻音乐，观赏来自<a target="_blank" href="https://www.bing.com" style="color:white">必应全球</a>的精美照片。<br><br>
+                在这里，你可以享受轻音乐，观赏来自<a target="_blank" href="https://www.bing.com" style="color:white">必应全球</a>的精美照片。</h3>
+                <p>背景图片来自网络（必应全球），加载速度视网络情况而定。</p>
             <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2210095297&auto=1&height=430">
             </iframe>
             

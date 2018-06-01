@@ -18,24 +18,26 @@ public class ZhuceServlet extends HttpServlet {
 		doPost(request, response);
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
+			throws ServletException, IOException 
+		{
 		String name = request.getParameter("name"); //获取jsp页面传过来的参数 
 		String pwd = request.getParameter("pwd");
 		String info = request.getParameter("info");
-		
 		User user = new User();
 		user.setName(name);
 		user.setPwd(pwd);
 		user.setInfo(info);
-		
 		UserDao ud = new UserDaoImpl();
-		
-		if(ud.register(user)){
+		if(name == null || name.length() <= 0 || pwd == null || pwd.length() <= 0 )
+		{
+			response.sendRedirect("blankzhuce.jsp");
+		}
+		else if(ud.register(user)){
 			request.setAttribute("username", name); //向request域中放置参数 
 			request.getRequestDispatcher("/denglu.jsp").forward(request, response);//转发到登录页面 
-		}else{
-			
+		}
+		else
+		{
 			response.sendRedirect("index.jsp");//重定向到首页
 		}
 	}

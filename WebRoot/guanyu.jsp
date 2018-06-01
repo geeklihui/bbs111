@@ -16,6 +16,7 @@ body
 }
 a{
 color:white;
+text-shadow:0 0 4px #000;
 }
 h2{
 	text-align:center;
@@ -30,7 +31,7 @@ h4{
 table{
 	text-align:center;
 	color:white;
-	text-shadow:0 0 3px #000;}
+	text-shadow:0 0 4px #000;}
 </style>
 </head>
 <body>
@@ -50,13 +51,13 @@ table{
 </nav>
 <div class="container" style="margin-top:100px;">
 <h2 >关于</h2>
-<h4 >本项目主要实现注册、登录、删除、修改用户信息，在登录成功页面提供相应的服务。<br><p></p>在项目的开发中，主要参考了以下资源，在此一并表示感谢：</h4>
+<h4 >本项目主要实现注册、登录、删除、修改、查询用户信息，在登录成功页面提供相应的服务。<br><p></p>在项目的开发中，主要参考了以下资源，在此一并表示感谢：</h4>
 <center>
 <table class="table" style="width:400px">
    <tbody>
       <tr>
-         <td><a target="_blank" href="https://www.cnblogs.com/beginner-boy/p/7806680.html">Windows 下 Tomcat的安装配置</a>
-         </td>
+       <a target="_blank" href="https://www.cnblogs.com/beginner-boy/p/7806680.html">Windows 下 Tomcat的安装配置</a>
+       <p></p>
       </tr>
       <tr>
          <td><a target="_blank" href="http://www.runoob.com/java/java-mysql-connect.html">Java MySQL 连接</a>
@@ -72,6 +73,14 @@ table{
       </tr>
       <tr>
          <td><a target="_blank" href="https://open.lylares.com/doc/#26">API 提供商及开发文档</a>
+         </td>
+      </tr>
+      <tr>
+         <td><a target="_blank" href="http://www.runoob.com/jsp/jsp-jstl.html">JSP 标准标签库（JSTL）</a>
+         </td>
+      </tr>
+      <tr>
+         <td><a target="_blank" href="http://www.runoob.com/jsp/jstl-core-foreach-tag.html">c:forEach 标签</a>
          </td>
       </tr>
       <tr>

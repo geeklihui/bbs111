@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tomcat.util.codec.binary.StringUtils;
+
 import com.dao.UserDao;
 import com.dao.UserDaoImpl;
 
@@ -18,16 +20,18 @@ public class DengluServlet extends HttpServlet { //需要继承HttpServlet
 		doPost(request, response);//将信息使用doPost方法执行
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
+			throws ServletException, IOException 
+	{
 		String name = request.getParameter("name");//得到jsp页面传过来的参数
 		String pwd = request.getParameter("pwd");
-		
 		UserDao ud = new UserDaoImpl();
-		
-		
-		if(ud.login(name, pwd)){
-			if(request.getParameter("name").equals("admin") && request.getParameter("pwd").equals("admin"))
+		if(name == null || name.length() <= 0 || pwd == null || pwd.length() <= 0 )
+		{
+			response.sendRedirect("blank.jsp");
+		}
+		else if(ud.login(name, pwd))
+		{
+			if(name.equals("admin") && pwd.equals("admin"))
 			{
 				request.getRequestDispatcher("/Searchall").forward(request, response);
 				//response.sendRedirect("showall.jsp");
@@ -37,10 +41,11 @@ public class DengluServlet extends HttpServlet { //需要继承HttpServlet
 			request.getRequestDispatcher("/success.jsp").forward(request, response);//转发至成功页
 			}
 		}
-		else{
+		else
+		{
 			response.sendRedirect("index.jsp");//重定向到首页
-			}
 		}
 	}
+}
 
 

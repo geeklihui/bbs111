@@ -39,7 +39,7 @@ h3{
 </nav>
 
 <center><h3 >
-密码错误或账户不存在！<a href="denglu.jsp" style="color:white">点击返回</a>
+账户或密码不能为空！<a href="zhuce.jsp" style="color:white">点击返回</a>
 </h3></center>
 </body>
 </html>

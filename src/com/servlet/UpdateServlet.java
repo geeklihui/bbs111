@@ -29,15 +29,16 @@ public class UpdateServlet extends HttpServlet {
 		String pwd = request.getParameter("pwd");
 		String info = request.getParameter("info");
 		
-		System.out.println("------------------------------------"+userId);
-		
 		UserDao ud = new UserDaoImpl();
 		
 		if(ud.update(userId, name, pwd, info)){
 			request.setAttribute("xiaoxi", "更新成功");
 			request.getRequestDispatcher("/Searchall").forward(request, response);
-		}else{
-			response.sendRedirect("index.jsp");
+		}else
+		{
+			request.setAttribute("xiaoxi", "更新失败");
+			request.getRequestDispatcher("/Searchall").forward(request, response);
 		}
+		
 	}
 }

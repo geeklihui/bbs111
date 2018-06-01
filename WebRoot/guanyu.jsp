@@ -56,7 +56,7 @@ table{
 <table class="table" style="width:400px">
    <tbody>
       <tr>
-       <a target="_blank" href="https://www.cnblogs.com/beginner-boy/p/7806680.html">Windows 下 Tomcat的安装配置</a>
+       <a target="_blank" href="https://www.cnblogs.com/beginner-boy/p/7806680.html">Windows 下 Tomcat 的安装配置</a>
        <p></p>
       </tr>
       <tr>

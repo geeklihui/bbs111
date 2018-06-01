@@ -12,6 +12,7 @@ body
 {
     background-image:url(https://api.dujin.org/bing/1366.php);
     background-size: cover;
+    background-color:gray;
 }
 h3{
 	text-align:center;
@@ -45,14 +46,9 @@ p{
             <h3>你好，${xiaoxi} <p></p>
                 在这里，你可以享受轻音乐，观赏来自<a target="_blank" href="https://www.bing.com" style="color:white">必应全球</a>的精美照片。</h3>
                 <p>背景图片来自网络（必应全球），加载速度视网络情况而定。</p>
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2210095297&auto=1&height=430">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2250189739&auto=1&height=430">
             </iframe>
             
 </center>
-<script>
-xhr.open('GET', "https://api.lylares.com/bing/image/random/?AppKey=6nyWRgqIdE");
-$.getJSON("https://api.lylares.com/bing/image/random/?AppKey=6nyWRgqIdE");
-
-</script>
 </body>
 </html>

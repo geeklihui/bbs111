@@ -7,6 +7,8 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>管理员模式</title>
 </head>
 <body>
@@ -27,9 +29,14 @@
     </div>
     </div>
 </nav>
- <h1>${xiaoxi}</h1> <center>
- <h3>管理员您好！</h3>
- <h4>以下是当前用户列表，您可以在文本框内直接修改信息。</h4> 
+<center>
+<div class="alert alert-warning fade in" style="margin-left:300px;margin-right:300px;">
+	<a href="#" class="close" data-dismiss="alert">
+		&times;
+	</a>
+	${xiaoxi}
+</div>
+ <h4>您已进入管理员模式，以下是用户列表，您可以在文本框内直接修改信息。</h4> 
   <table  width="600" border="1" cellpadding="0" >  
         <tr>  
             <th>ID</th>  
